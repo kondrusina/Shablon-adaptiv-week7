@@ -1,0 +1,76 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 500px 100px;
+    grid-template-areas:
+        'header header'
+        'main aside'
+        'footer footer';
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.header {
+    grid-area: header;
+    background-color: aquamarine;
+
+
+}
+
+.main {
+    display: grid;
+    grid-area: main;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+        'section1 section1'
+        'section2 section3'
+        'section4 section4';
+    gap: 5px;
+}
+
+.section1 {
+    grid-area: section1;
+    background-color: cornflowerblue;
+}
+
+.section2 {
+    grid-area: section2;
+    background-color: darkkhaki;
+}
+
+.section3 {
+    grid-area: section3;
+    background-color: darkkhaki;
+
+}
+
+.section4 {
+    grid-area: section4;
+    background-color: cornflowerblue;
+}
+
+.asaide {
+    grid-area: aside;
+    background-color: burlywood;
+}
+
+.footer {
+    grid-area: footer;
+    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    justify-content: space-around;
+    background-color: aquamarine;
+    gap: 5px;
+}
+
+.footer section {
+    background-color: darkkhaki;
+    width: 15%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
